@@ -17,7 +17,7 @@
     <nav class="navbar custom-navbar navbar-expand-md navbar-light fixed-top" data-spy="affix" data-offset-top="10">
         <div class="container">
             <a class="navbar-brand" href="#">
-                <img  src="assets/imgs/logo.png" alt="">
+                <img src="assets/imgs/logo.svg" alt="">
             </a>
             <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -25,23 +25,17 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ml-auto">                     
                     <li class="nav-item">
-                        <a class="nav-link" href="#service">Our Service</a>
+                        <a class="nav-link" href="#service">Notre Service</a>
                     </li>
+              
+                
                     <li class="nav-item">
-                        <a class="nav-link" href="#about">About Us</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#portfolio">Portfolio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#blog">Blog</a>
+                        <a class="nav-link" href="#blog">Traitement</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#contact">Contact</a>
                     </li>
-                    <li class="nav-item">
-                        <a href="components.html" class="ml-4 nav-link btn btn-primary btn-sm rounded">Components</a>
-                    </li>
+                 
                 </ul>
             </div>
         </div>
@@ -51,7 +45,7 @@
     <!-- Page Header -->
     <header class="header">
         <div class="overlay">
-            <h1 class="subtitle">MIND YOUR LUGGAGE</h1>
+            <h1 class="subtitle">Détection</h1>
             <h1 class="title">Détection Bagages Oubliés</h1>  
         </div>  
         <div class="shape">
@@ -107,43 +101,64 @@
     <!-- Blog Section -->
     <section class="section" id="blog">
         <div class="container">
-            <h6 class="section-title mb-0 text-center">Options de Vidéo</h6>
-            <h6 class="section-subtitle mb-5 text-center">Choisissez l'option qui vous convient pour analyser vos vidéos</h6>
+            <h6 class="section-title mb-0 text-center">Choisir une Option de Vidéo</h6>
+            <h6 class="section-subtitle mb-5 text-center">Sélectionnez une option pour télécharger ou enregistrer une vidéo à analyser</h6>
     
             <div class="row">
+                <!-- Choisir une vidéo déjà enregistrée -->
                 <div class="col-md-4">
-                    <div class="card border-0 mb-4">
-                        <img src="assets/imgs/blog-1.jpg" alt="" class="card-img-top w-100">
-                        <div class="card-body">                         
+                    <div class="card border-0 mb-4 shadow-sm">
+                        <img src="assets/imgs/video-1.jpg" alt="" class="card-img-top w-100">
+                        <div class="card-body">
                             <h6 class="card-title">Choisir une vidéo déjà enregistrée</h6>
                             <p>Importez une vidéo existante depuis vos fichiers pour l'analyser.</p>
-                            <a href="javascript:void(0)" class="small text-muted">Choisir la vidéo</a>
+                            <form>
+                                <input type="file" class="form-control mb-3" accept="video/*">
+                                <button type="submit" class="btn btn-primary btn-block">Analyser la vidéo</button>
+                            </form>
                         </div>
                     </div>
                 </div>
+    
+                <!-- Enregistrer une vidéo pour traitement ultérieur -->
                 <div class="col-md-4">
-                    <div class="card border-0 mb-4">
-                        <img src="assets/imgs/blog-2.jpg" alt="" class="card-img-top w-100">
-                        <div class="card-body">                         
+                    <div class="card border-0 mb-4 shadow-sm">
+                        <img src="assets/imgs/video-2.jpg" alt="" class="card-img-top w-100">
+                        <div class="card-body">
                             <h6 class="card-title">Enregistrer une vidéo pour traitement ultérieur</h6>
-                            <p>Enregistrez une nouvelle vidéo qui sera ensuite traitée pour analyse.</p>
-                            <a href="javascript:void(0)" class="small text-muted">Enregistrer une vidéo</a>
+                            <p>Enregistrez une nouvelle vidéo</p>
+                            <form>
+                                <select class="form-control mb-3" id="cameraSelect">
+                                    <option value="camera1">Caméra 1</option>
+                                    <option value="camera2">Caméra 2</option>
+                                    <option value="camera3">Caméra 3</option>
+                                </select>
+                                <button type="submit" class="btn btn-primary btn-block">Enregistrer et analyser</button>
+                            </form>
                         </div>
                     </div>
                 </div>
+    
+                <!-- Prendre une vidéo via votre téléphone -->
                 <div class="col-md-4">
-                    <div class="card border-0 mb-4">
-                        <img src="assets/imgs/blog-3.jpg" alt="" class="card-img-top w-100">
-                        <div class="card-body">                         
+                    <div class="card border-0 mb-4 shadow-sm">
+                        <img src="assets/imgs/video-3.jpg" alt="" class="card-img-top w-100">
+                        <div class="card-body">
                             <h6 class="card-title">Prendre une vidéo via votre téléphone</h6>
                             <p>Enregistrez une vidéo directement avec votre téléphone pour analyse.</p>
-                            <a href="javascript:void(0)" class="small text-muted">Prendre une vidéo</a>
+                            <form>
+                                <input type="file" class="form-control mb-3" accept="video/*" capture="camera">
+                                <button type="submit" class="btn btn-primary btn-block">Prendre et analyser</button>
+                            </form>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+    
+   
+    
     
     <!-- End of Blog Section -->
 
@@ -157,7 +172,7 @@
                     <div class="card">
                         <div class="card-body">
                             <div class="media align-items-center mb-3">
-                                <img class="mr-3" src="assets/imgs/avatar.jpg" alt="">
+                                <img class="mr-3" src="assets/imgs/ahmed.png" alt="">
                                 <div class="media-body">
                                     <h6 class="mt-1 mb-0">Bourazza Ahmed</h6>
                                     <small class="text-muted mb-0">étudiant ingénieur à ENSIM</small>     
@@ -171,7 +186,7 @@
                     <div class="card">
                         <div class="card-body">
                             <div class="media align-items-center mb-3">
-                                <img class="mr-3" src="assets/imgs/avatar-1.jpg" alt="">
+                                <img class="mr-3" src="assets/imgs/nihad.jpg" alt="">
                                 <div class="media-body">
                                     <h6 class="mt-1 mb-0">Elbari Nihad</h6>
                                     <small class="text-muted mb-0">étudiante ingénieur à ENSIM</small>      
@@ -185,7 +200,7 @@
                     <div class="card">
                         <div class="card-body">
                             <div class="media align-items-center mb-3">
-                                <img class="mr-3" src="assets/imgs/avatar-2.jpg" alt="">
+                                <img class="mr-3" src="assets/imgs/kawtar.jpg" alt="">
                                 <div class="media-body">
                                     <h6 class="mt-1 mb-0">Tlemencani Kawtar</h6>
                                     <small class="text-muted mb-0">étudiante ingénieur à ENSIM</small>        
